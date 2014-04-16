@@ -8,7 +8,8 @@ public class DrlAR {
 	private double confidenceValue = -1;
 	private double supportValue = -1;
 	private boolean checkedOk=false;
-	
+
+    private String model;
 	
 	public DrlAR(){}
 	
@@ -16,7 +17,8 @@ public class DrlAR {
 		setId(id);
 	}
 	
-	public DrlAR(String id,int antecedentLength, double confidenceValue, double supportValue){
+	public DrlAR(String model, String id,int antecedentLength, double confidenceValue, double supportValue){
+        this.model = model;
 		setId(id);
 		setAntecedentLength(antecedentLength);
 		setConfidenceValue(confidenceValue);
@@ -79,7 +81,34 @@ public class DrlAR {
 		this.setCheckedOk(false);
 		this.setBestId(ar.getId());
 	}
-	
 
-	
+
+    @Override
+    public boolean equals( Object o ) {
+        if ( this == o ) return true;
+        if ( o == null || getClass() != o.getClass() ) return false;
+
+        DrlAR drlAR = (DrlAR) o;
+
+        if ( !model.equals( drlAR.model ) ) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return model.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "DrlAR{" +
+               "id='" + id + '\'' +
+               ", bestId='" + bestId + '\'' +
+               ", antecedentLength=" + antecedentLength +
+               ", confidenceValue=" + confidenceValue +
+               ", supportValue=" + supportValue +
+               ", checkedOk=" + checkedOk +
+               '}';
+    }
 }

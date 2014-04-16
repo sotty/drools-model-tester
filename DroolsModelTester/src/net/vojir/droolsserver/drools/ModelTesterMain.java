@@ -3,6 +3,7 @@ package net.vojir.droolsserver.drools;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import net.vojir.droolsserver.xml.XmlParser;
@@ -32,22 +33,30 @@ public class ModelTesterMain {
 				output=arg.substring(8);
 			}
 		}
-		
-		
-		
-		String xmlString = readFileToString(args[0]);
-		String csvString = readFileToString(args[1]);
-    	
-    	//Pøipravení drools stateless session
-    	ModelTester modelTester = ModelTester.prepareFromXml(xmlString);
-    	modelTester.testAllRows(csvString,method);
-    	
-    	System.out.println(ModelTesterMain.prepareOutput(modelTester, output));
-	}
-	
-	private static String prepareOutput(ModelTester modelTester,String outputType){
-		StringBuffer output=new StringBuffer();
-		if (outputType.equals("xml")){
+
+        String xmlString = readFileToString(args[0]);
+        String csvString = readFileToString(args[1]);
+
+        run( xmlString, csvString, method, output );
+    }
+
+    public static void run( String xmlString, String csvString, String method, String output ) {
+        try {
+
+            //Pï¿½ipravenï¿½ drools stateless session
+            ModelTester modelTester = ModelTester.prepareFromXml(xmlString);
+            modelTester.testAllRows(csvString,method);
+
+            System.out.println(ModelTesterMain.prepareOutput(modelTester, output));
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private static String prepareOutput(ModelTester modelTester,String outputType){
+        StringBuffer output=new StringBuffer();
+        if (outputType.equals("xml")){
 			output.append("<results>");
 			output.append("<method>"+ModelTesterSessionHelper.getBetterARMethod()+"</method>");
 			output.append("<rowsTotal>"+modelTester.getRowsTotalCount()+"</rowsTotal>");
@@ -60,7 +69,8 @@ public class ModelTesterMain {
 			output.append("Rows total: "+modelTester.getRowsTotalCount()+"\n");
 			output.append("Rows positive: "+modelTester.getRowsPositiveMatch()+"\n");
 			output.append("Rows negative: "+modelTester.getRowsNegativeMatch()+"\n");
-			output.append("Rows errors: "+modelTester.getRowsError());
+			output.append("Rows errors: "+modelTester.getRowsError()+"\n");
+            output.append( "Total rules fired: " + modelTester.getRulesFired() );
 	    	
 		}
 		return output.toString();
@@ -71,7 +81,7 @@ public class ModelTesterMain {
 	private static String readFileToString(String fileName) throws IOException{
 		StringBuffer sb = new StringBuffer();
     	BufferedReader br = null;
-		br = new BufferedReader(new FileReader(fileName));
+		br = new BufferedReader(new FileReader( fileName ) );
     	for (int c = br.read(); c != -1; c = br.read()) sb.append((char)c);
 		
     	return sb.toString();

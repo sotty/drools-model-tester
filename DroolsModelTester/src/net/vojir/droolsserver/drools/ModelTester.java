@@ -7,34 +7,46 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-
 import net.vojir.droolsserver.xml.AssociationRulesXmlParser;
 
-import org.drools.core.StatelessSession;
 
 import com.googlecode.jcsv.reader.CSVReader;
 import com.googlecode.jcsv.reader.internal.CSVReaderBuilder;
+import org.kie.api.KieBase;
+import org.kie.api.event.rule.AfterMatchFiredEvent;
+import org.kie.api.event.rule.AgendaEventListener;
+import org.kie.api.event.rule.AgendaGroupPoppedEvent;
+import org.kie.api.event.rule.AgendaGroupPushedEvent;
+import org.kie.api.event.rule.BeforeMatchFiredEvent;
+import org.kie.api.event.rule.MatchCancelledEvent;
+import org.kie.api.event.rule.MatchCreatedEvent;
+import org.kie.api.event.rule.RuleFlowGroupActivatedEvent;
+import org.kie.api.event.rule.RuleFlowGroupDeactivatedEvent;
+import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.StatelessKieSession;
+import org.kie.api.runtime.rule.QueryResults;
+import org.kie.api.runtime.rule.Variable;
+import org.kie.internal.runtime.StatefulKnowledgeSession;
 
 /**
- * Tøída sloužící ke kontrole pøesnosti a úplnosti modelu tvoøeného asociaèními pravidly (naèítající data z DB, využívající znalostní bázi v drools)
+ * Tï¿½ï¿½da slouï¿½ï¿½cï¿½ ke kontrole pï¿½esnosti a ï¿½plnosti modelu tvoï¿½enï¿½ho asociaï¿½nï¿½mi pravidly (naï¿½ï¿½tajï¿½cï¿½ data z DB, vyuï¿½ï¿½vajï¿½cï¿½ znalostnï¿½ bï¿½zi v drools)
  * @author Standa
  *
  */
 @SuppressWarnings("restriction")
 public class ModelTester {
 	
-	private StatelessSession droolsSession;
-	//èítaèe
+	private KieBase droolsKieBase;
+	//ï¿½ï¿½taï¿½e
 	private int rowsPositiveMatch;
 	private int rowsNegativeMatch;
 	private int rowsError;
 	private int rowsTotalCount;
+    private int rulesFired;
 	final static String xslTemlateResourceName="ar2drl.xslt";
 	
-	public ModelTester(StatelessSession droolsSession){
-		this.droolsSession=droolsSession;
+	public ModelTester( KieBase droolsKieBase){
+		this.droolsKieBase=droolsKieBase;
 	}
 	
 	public void testAllRows(String csvContent,String betterRuleSelectionMethod){
@@ -43,7 +55,7 @@ public class ModelTester {
 	}
 	
 	/**
-	 * Funkce pro projití jednotlivých øádkù a otestování, jestli odpovídají asociaèním pravidlùm v drools stateless session
+	 * Funkce pro projitï¿½ jednotlivï¿½ch ï¿½ï¿½dkï¿½ a otestovï¿½nï¿½, jestli odpovï¿½dajï¿½ asociaï¿½nï¿½m pravidlï¿½m v drools stateless session
 	 * @param csvContent
 	 */
 	public void testAllRows(String csvContent){
@@ -56,41 +68,51 @@ public class ModelTester {
 		
 		CSVReader<String[]> csvParser = CSVReaderBuilder.newDefaultReader(reader);
 		Iterator<String[]> iterator = csvParser.iterator();
-		//pøipravení pøehledu záhlaví
+		//pï¿½ipravenï¿½ pï¿½ehledu zï¿½hlavï¿½
 		header = iterator.next();
 		columnsCount=header.length;
-		
-		//jednotlivé øádky
+
+        CountingRuleEventListener listener = new CountingRuleEventListener();
+        //jednotlivï¿½ ï¿½ï¿½dky
 		while(iterator.hasNext()){
-			//kontrola jednoho øádku z datové matice
+            KieSession droolsSession = droolsKieBase.newKieSession();
+
+			//kontrola jednoho ï¿½ï¿½dku z datovï¿½ matice
 			row=iterator.next();
 			setRowsTotalCount(getRowsTotalCount() + 1);
 			if (row.length != columnsCount){
 				setRowsError(getRowsError() + 1);
 				continue;
 			}
-			//vytvoøení kolekce a test pomocí drools
-			DrlAR drlAR= new DrlAR();
-			rowsObjects.clear();
+			//vytvoï¿½enï¿½ kolekce a test pomocï¿½ drools
 			for (int i=0;i<columnsCount;i++){
-				rowsObjects.add(new DrlObj(header[i],row[i]));
+				droolsSession.insert( new DrlObj( header[ i ], row[ i ] ) );
 			}
-			rowsObjects.add(drlAR);
-			droolsSession.execute(rowsObjects);
-			
+
+            droolsSession.addEventListener( listener );
+            droolsSession.fireAllRules();
+
+            QueryResults results = droolsSession.getQueryResults( "result", Variable.v );
+            if ( results.size() != 1 ) {
+                throw new IllegalStateException( "Only 1 result expected, we found " + results.size() );
+            }
+            DrlAR drlAR = (DrlAR) results.iterator().next().get( "$ar" );
+
+            setRulesFired( listener.getFireCount() );
 			if (drlAR.isCheckedOk()){
 				setRowsPositiveMatch(getRowsPositiveMatch() + 1);
 			}else if(!drlAR.getBestId().equals("")){
 				setRowsNegativeMatch(getRowsNegativeMatch() + 1);
 			}
-			
-			//--kontrola jednoho øádku z datové matice			
+
+            droolsSession.dispose();
+			//--kontrola jednoho ï¿½ï¿½dku z datovï¿½ matice			
 		}
 		
 	}
 	
 	/**
-	 * Funkce pro vynulování èítaèù
+	 * Funkce pro vynulovï¿½nï¿½ ï¿½ï¿½taï¿½ï¿½
 	 */
 	private void resetCounters(){
 		this.setRowsPositiveMatch(0);
@@ -162,11 +184,18 @@ public class ModelTester {
 	public void setRowsTotalCount(int rowsTotalCount) {
 		this.rowsTotalCount = rowsTotalCount;
 	}
-	
-	/**
-	 * Statická funkce pro vytvoøení nového modeltesteru na základì XML øetìzce a transformaèní šablony
+
+    public int getRulesFired() {
+        return rulesFired;
+    }
+
+    public void setRulesFired( int rulesFired ) {
+        this.rulesFired = rulesFired;
+    }
+
+    /**
+	 * Statickï¿½ funkce pro vytvoï¿½enï¿½ novï¿½ho modeltesteru na zï¿½kladï¿½ XML ï¿½etï¿½zce a transformaï¿½nï¿½ ï¿½ablony
 	 * @param xmlString
-	 * @param xslTemlateResourceName
 	 * @return
 	 * @throws Exception
 	 */
@@ -174,7 +203,7 @@ public class ModelTester {
 		String drlString;
 		try {
 			drlString = AssociationRulesXmlParser.transformBigXml(xmlString, xslTemlateResourceName);
-		} catch (TransformerFactoryConfigurationError | TransformerException e) {
+		} catch (Exception e) {
 			throw new Exception("Transformation from XML to DRL failed!",e);
 		}
     	
@@ -186,10 +215,29 @@ public class ModelTester {
     	
     	//System.out.println("DRL string prepared");
     	
-    	StatelessSession statelessSession = ModelTesterSessionHelper.prepareStatelessSession(drlString);
+    	KieBase kieBase = ModelTesterSessionHelper.prepareKieBase( drlString );
 
     	//System.out.println("StatelessSession created");
     	
-    	return new ModelTester(statelessSession);
+    	return new ModelTester(kieBase);
+    }
+
+
+    private class CountingRuleEventListener implements AgendaEventListener {
+        int fireCount = 0;
+        public void matchCreated( MatchCreatedEvent event ) { }
+        public void matchCancelled( MatchCancelledEvent event ) {}
+        public void beforeMatchFired( BeforeMatchFiredEvent event ) {}
+        public void afterMatchFired( AfterMatchFiredEvent event ) { fireCount++; }
+        public void agendaGroupPopped( AgendaGroupPoppedEvent event ) {}
+        public void agendaGroupPushed( AgendaGroupPushedEvent event ) {}
+        public void beforeRuleFlowGroupActivated( RuleFlowGroupActivatedEvent event ) {}
+        public void afterRuleFlowGroupActivated( RuleFlowGroupActivatedEvent event ) {}
+        public void beforeRuleFlowGroupDeactivated( RuleFlowGroupDeactivatedEvent event ) {}
+        public void afterRuleFlowGroupDeactivated( RuleFlowGroupDeactivatedEvent event ) {}
+
+        public int getFireCount() {
+            return fireCount;
+        }
     }
 }

@@ -1,156 +1,162 @@
 package net.vojir.droolsserver.drools;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 
-import org.drools.compiler.compiler.DroolsParserException;
-import org.drools.compiler.compiler.PackageBuilder;
-import org.drools.core.RuleBase;
-import org.drools.core.RuleBaseFactory;
-import org.drools.core.StatelessSession;
-import org.drools.core.rule.Package;
+import org.drools.core.BeliefSystemType;
+import org.drools.core.RuleBaseConfiguration;
+import org.drools.core.beliefsystem.BeliefSystem;
+import org.drools.core.common.BeliefSystemFactory;
+import org.drools.core.common.InternalRuleBase;
+import org.drools.core.common.NamedEntryPoint;
+import org.drools.core.common.TruthMaintenanceSystem;
+import org.drools.core.impl.KnowledgeBaseImpl;
+import org.drools.core.reteoo.KieComponentFactory;
+import org.kie.api.KieBase;
+import org.kie.api.KieBaseConfiguration;
+import org.kie.api.KieServices;
+import org.kie.api.builder.KieBuilder;
+import org.kie.api.builder.KieFileSystem;
+import org.kie.api.builder.KieModule;
+import org.kie.api.builder.Message;
+import org.kie.api.conf.DeclarativeAgendaOption;
+import org.kie.api.conf.EqualityBehaviorOption;
+import org.kie.api.event.rule.DebugAgendaEventListener;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.StatelessKieSession;
+import org.kie.api.runtime.rule.Match;
+import org.kie.internal.io.ResourceFactory;
 
 @SuppressWarnings("restriction")
 public class ModelTesterSessionHelper {
 
-	private static String betterARMethod;
+    private static enum BetterARMethod {
+        CONFIDENCE("confidence"),
+        SUPPORT("support"),
+        CONF_SUPP("csCombination"),
+        MORESPECIFIC("longerAntecedent"),
+        LESSSPECIFIC("shorterAntecedent");
+
+        private String name;
+
+        BetterARMethod( String n ) {
+            this.name = n;
+        }
+
+        public static BetterARMethod parse( String s ) {
+            for ( BetterARMethod method : BetterARMethod.values() ) {
+                if ( method.name.equals( s ) ) {
+                    return method;
+                }
+            }
+            return null;
+        }
+    }
+
+    private static BetterARMethod betterARMethod;
 	
 	/**
-	 * Funkce pro vytvoøení nového DLR øetìzce - inicializace pomocí výchozích importù
+	 * Funkce pro vytvoï¿½enï¿½ novï¿½ho DLR ï¿½etï¿½zce - inicializace pomocï¿½ vï¿½chozï¿½ch importï¿½
 	 */
 	public static String prepareDrlString(String drl){
 		StringBuffer drlString=new StringBuffer();
 		drlString.append("import net.vojir.droolsserver.drools.DrlObj;");
 		drlString.append("import net.vojir.droolsserver.drools.DrlAR;");
+		drlString.append("import " + Match.class.getName() + ";" );
 		drlString.append("import function net.vojir.droolsserver.drools.ModelTesterSessionHelper.isBetterAR;");
-		drlString.append("rule zeroRule salience -1000 when $ar:DrlAR(id!=\"\") then $ar.setId(\"\");update($ar)end");
+
+        drlString.append("\n\n rule zeroRule salience -1000 \n" +
+                         "when $ar:DrlAR(id!=\"\") \n" +
+                         "then " +
+                         "  System.out.println( 'ZERO' ); " +
+                         "  $ar.setId(\"\"); " +
+                         "  update($ar) \n" +
+                         "end \n" +
+                         "" +
+                         "query result( DrlAR $ar ) " +
+                         "  $ar := DrlAR() " +
+                         "end " +
+                         "" +
+                         "" +
+
+/*
+
+                         "rule 'Block by confidence' @Direct " +
+                         "dialect 'mvel' " +
+                         "when " +
+                         "  $m1 : Match( associationRole == 'premise'  ) " +
+                         "  $m2 : Match( this != $m1, associationRole == 'premise', " +
+                         "               confidence > $m1.confidence ||" +
+                         "               confidence == $m1.confidence && support > $m1.support ) " +
+                         "then " +
+                         "  kcontext.cancelMatch( $m1 ); " +
+                         "end " +
+*/
+
+
+                         "rule Log " +
+                         "salience 1000 " +
+                         "when $ar : DrlAR() " +
+                         "then System.out.println( '   >>>> ' + $ar ) ; " +
+                         "end " +
+                         "" );
+
 		drlString.append(drl);
+
 		return drlString.toString();
 	}
-	
+
 	/**
-	 * Statická funkce pro vytvoøení RuleBase na základì DRL øetìzce
+	 * Statickï¿½ funkce pro vytvoï¿½enï¿½ stateless session
 	 * @param drlString
 	 * @return
 	 */
-	public static RuleBase prepareRuleBase(String drlString){
-		//read in the source
-		Reader source = new StringReader(drlString);
-				
-		PackageBuilder builder = new PackageBuilder();
-		
-		Package pkg = builder.getPackage();
-		if (pkg!=null){
-			builder.getPackage().clear();
-		}
-		
-		//this wil parse and compile in one step
-		//NOTE: There are 2 methods here, the one argument one is for normal DRL.
-		try {
-			builder.addPackageFromDrl(source);
-		} catch (DroolsParserException | IOException e) {
-			//TODO zalogování chyby
-			e.printStackTrace();
-		}
-		
-		//get the compiled package (which is serializable)
-		pkg = builder.getPackage();
-		
-		//add the package to a rulebase (deploy the rule package).
-		RuleBase ruleBase = RuleBaseFactory.newRuleBase();
-		ruleBase.addPackage(pkg);
-		return ruleBase;		
+    public static KieBase prepareKieBase(String drlString) {
+
+        KieServices ks = KieServices.Factory.get();
+        KieFileSystem kfs = ks.newKieFileSystem();
+        kfs.write( ResourceFactory.newByteArrayResource( drlString.getBytes() ).setTargetPath("rules.drl") );
+
+        KieBuilder kbuilder = KieServices.Factory.get().newKieBuilder(kfs);
+        kbuilder.buildAll();
+        if ( kbuilder.getResults().hasMessages( Message.Level.ERROR ) ) {
+            System.out.println( kbuilder.getResults().getMessages( Message.Level.ERROR ));
+        }
+
+        ks.newKieContainer(kbuilder.getKieModule().getReleaseId()).getKieBase();
+
+        KieBaseConfiguration kconf = ks.newKieBaseConfiguration();
+        kconf.setOption( DeclarativeAgendaOption.ENABLED );
+        kconf.setOption( EqualityBehaviorOption.EQUALITY );
+        (( RuleBaseConfiguration ) kconf).setComponentFactory( new KieComponentFactory() {
+            @Override
+            public BeliefSystemFactory getBeliefSystemFactory() {
+                return new BeliefSystemFactory() {
+                    @Override
+                    public BeliefSystem createBeliefSystem( BeliefSystemType type, NamedEntryPoint ep, TruthMaintenanceSystem tms ) {
+                        return new ARConflictResolvingBeliefSystem( ep, tms );
+                    }
+                };
+            }
+        });
+
+        KieContainer kContainer = ks.newKieContainer( kbuilder.getKieModule().getReleaseId() );
+        KieBase kieBase = kContainer.newKieBase( kconf );
+
+        return kieBase;
 	}
     
-	/**
-	 * Statická funkce pro vytvoøení stateless session
-	 * @param drlString
-	 * @return
-	 */
-    public static StatelessSession prepareStatelessSession(String drlString){
-		RuleBase ruleBase = prepareRuleBase(drlString);
-		return ruleBase.newStatelessSession();
-	}
-    
-    
-    /**
-     * Statická funkce sloužící k vyhodnocení, jestli je novì vyhodnocované pravidlo lepší, než pøedchozí nalezená varianta
-     * @param globalAR
-     * @param currentAR
-     * @return
-     */
-    public static boolean isBetterAR(DrlAR globalAR, DrlAR currentAR){
-    	if (globalAR.getBestId().equals("")){
-    		return true;
-    	}
-		switch (getBetterARMethod()) {
-			case "longerAntecedent":
-				return isBetterAR_longerAntecedent(globalAR, currentAR);
-			case "shorterAntecedent":
-				return isBetterAR_shorterAntecedent(globalAR, currentAR);
-			case "support":
-				return isBetterAR_support(globalAR, currentAR);
-			case "csCombination":
-				return isBetterAR_confidenceSupportCombination(globalAR, currentAR);
-			default:
-				return isBetterAR_confidence(globalAR, currentAR);
-		}
-    }
-    
+
     //-----------------------------------------------------------------------------------
-    public static boolean isBetterAR_confidence(DrlAR globalAR,DrlAR currentAR){
-    	if (currentAR.getConfidenceValue()>globalAR.getConfidenceValue()){
-			return true;
-		}else if(currentAR.getConfidenceValue()==globalAR.getConfidenceValue()){
-			return (currentAR.getSupportValue()>globalAR.getSupportValue());
-		}
-		return false;
-    }
-    public static boolean isBetterAR_longerAntecedent(DrlAR globalAR,DrlAR currentAR){
-    	if (currentAR.getAntecedentLength()>globalAR.getAntecedentLength()){
-			return true;
-		}else if(currentAR.getAntecedentLength()==globalAR.getAntecedentLength()){
-			return isBetterAR_confidence(globalAR, currentAR);
-		}
-		return false;
-    }
-    public static boolean isBetterAR_shorterAntecedent(DrlAR globalAR,DrlAR currentAR){
-    	if (currentAR.getAntecedentLength()<globalAR.getAntecedentLength()){
-			return true;
-		}else if(currentAR.getAntecedentLength()==globalAR.getAntecedentLength()){
-			return isBetterAR_confidence(globalAR, currentAR);
-		}
-		return false;
-    }
-    public static boolean isBetterAR_support(DrlAR globalAR,DrlAR currentAR){
-    	if (currentAR.getSupportValue()>globalAR.getSupportValue()){
-			return true;
-		}else if(currentAR.getSupportValue()==globalAR.getSupportValue()){
-			return isBetterAR_confidence(globalAR, currentAR);
-		}
-		return false;
-    }
-    public static boolean isBetterAR_confidenceSupportCombination(DrlAR globalAR,DrlAR currentAR){
-    	double ar1=globalAR.getConfidenceValue()*Math.log(globalAR.getSupportValue());
-    	double ar2=currentAR.getConfidenceValue()*Math.log(currentAR.getSupportValue());
-    	return (ar2>ar1);
-    }
-    //-----------------------------------------------------------------------------------
-	public static String getBetterARMethod() {
+	public static BetterARMethod getBetterARMethod() {
 		return betterARMethod;
 	}
 
 	public static void setBetterARMethod(String betterARMethod) {
-		if (betterARMethod.equals("confidence")||
-				betterARMethod.equals("longerAntecedent")||
-				betterARMethod.equals("shorterAntecedent")||
-				betterARMethod.equals("support")){
-			ModelTesterSessionHelper.betterARMethod = betterARMethod;
-		}else{
-			System.out.println("NEEXISTUJE metoda "+betterARMethod);
+		ModelTesterSessionHelper.betterARMethod = BetterARMethod.parse( betterARMethod );
+
+        if ( ModelTesterSessionHelper.betterARMethod == null ) {
+			System.out.println( "NEEXISTUJE metoda "+betterARMethod );
 			System.exit(0);
-			ModelTesterSessionHelper.betterARMethod="confidence";
 		}
 	}
     

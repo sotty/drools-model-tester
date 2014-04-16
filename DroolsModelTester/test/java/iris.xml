@@ -1,0 +1,5719 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<AssociationRules xmlns="http://keg.vse.cz/lm/AssociationRules/v1.0">
+
+	<guha:AssociationModel xmlns=""
+	                       xmlns:guha="http://keg.vse.cz/ns/GUHA0.1rev1"
+	                       functionName="associationRules" algorithmName="4ft"
+	                       numberOfTransactions="135"
+	                       numberOfCategories="21"
+	                       numberOfRules="96"
+			>
+		<TaskSetting>
+			<Extension name="LISp-Miner">
+				<TaskState>Solved</TaskState>
+				<HypothesesCountMax>50000</HypothesesCountMax>
+			</Extension>
+		</TaskSetting>
+	</guha:AssociationModel>
+
+	<AssociationRule id="1">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="2">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="3">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="4">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;2.02;2.26)) &amp; sepalLength(&lt;6.46;6.82)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="5">
+		<Text>petalLength(&lt;1;1.59)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="34" b="0" c="11" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="6">
+		<Text>petalLength(&lt;1.59;2.18)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1.59;2.18)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.59" rightMargin="2.18" />
+							<Interval closure="closedOpen" leftMargin="2.18" rightMargin="2.77" />
+							<Interval closure="closedOpen" leftMargin="2.77" rightMargin="3.36" />
+							<Interval closure="closedOpen" leftMargin="3.36" rightMargin="3.95" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.55</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="9" c="34" d="81" />
+
+	</AssociationRule>
+	<AssociationRule id="7">
+		<Text>petalLength(&lt;3.95;4.54)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1777777778</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.96</IMValue>
+		</IMValues>
+
+		<FourFtTable a="24" b="1" c="21" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="8">
+		<Text>petalLength(&lt;4.54;5.13)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1037037037</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5384615385</IMValue>
+		</IMValues>
+
+		<FourFtTable a="14" b="12" c="31" d="78" />
+
+	</AssociationRule>
+	<AssociationRule id="9">
+		<Text>petalLength(&lt;5.13;5.72)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2222222222</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="30" b="0" c="15" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="10">
+		<Text>petalWidth(&lt;0.1;0.34)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="36" b="0" c="9" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="11">
+		<Text>petalWidth(&lt;0.34;0.58)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.34;0.58)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.34" rightMargin="0.58" />
+							<Interval closure="closedOpen" leftMargin="0.58" rightMargin="0.82" />
+							<Interval closure="closedOpen" leftMargin="0.82" rightMargin="1.06" />
+							<Interval closure="closedOpen" leftMargin="1.06" rightMargin="1.3" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5714285714</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="9" c="33" d="81" />
+
+	</AssociationRule>
+	<AssociationRule id="12">
+		<Text>petalWidth(&lt;1.3;1.54)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2148148148</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.90625</IMValue>
+		</IMValues>
+
+		<FourFtTable a="29" b="3" c="16" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="13">
+		<Text>petalWidth(&lt;1.54;1.78)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.162962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8461538462</IMValue>
+		</IMValues>
+
+		<FourFtTable a="22" b="4" c="23" d="86" />
+
+	</AssociationRule>
+	<AssociationRule id="14">
+		<Text>petalWidth(&lt;2.02;2.26)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1481481481</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="20" b="0" c="25" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="15">
+		<Text>sepalLength(&lt;4.3;4.66)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1925925926</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8965517241</IMValue>
+		</IMValues>
+
+		<FourFtTable a="26" b="3" c="19" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="16">
+		<Text>sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1333333333</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5</IMValue>
+		</IMValues>
+
+		<FourFtTable a="18" b="18" c="27" d="72" />
+
+	</AssociationRule>
+	<AssociationRule id="17">
+		<Text>sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1481481481</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5</IMValue>
+		</IMValues>
+
+		<FourFtTable a="20" b="20" c="25" d="70" />
+
+	</AssociationRule>
+	<AssociationRule id="18">
+		<Text>sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.162962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.7333333333</IMValue>
+		</IMValues>
+
+		<FourFtTable a="22" b="8" c="23" d="82" />
+
+	</AssociationRule>
+	<AssociationRule id="19">
+		<Text>sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2296296296</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5849056604</IMValue>
+		</IMValues>
+
+		<FourFtTable a="31" b="22" c="14" d="68" />
+
+	</AssociationRule>
+	<AssociationRule id="20">
+		<Text>sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1111111111</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.6</IMValue>
+		</IMValues>
+
+		<FourFtTable a="15" b="10" c="30" d="80" />
+
+	</AssociationRule>
+	<AssociationRule id="21">
+		<Text>sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1333333333</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8571428571</IMValue>
+		</IMValues>
+
+		<FourFtTable a="18" b="3" c="27" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="22">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1481481481</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="20" b="0" c="25" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="23">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="24">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="25">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="26">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="27">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="28">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="29">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="30">
+		<Text>petalLength(&lt;1.59;2.18)) &amp; petalWidth(&lt;0.34;0.58)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1.59;2.18)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.59" rightMargin="2.18" />
+							<Interval closure="closedOpen" leftMargin="2.18" rightMargin="2.77" />
+							<Interval closure="closedOpen" leftMargin="2.77" rightMargin="3.36" />
+							<Interval closure="closedOpen" leftMargin="3.36" rightMargin="3.95" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.34;0.58)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.34" rightMargin="0.58" />
+							<Interval closure="closedOpen" leftMargin="0.58" rightMargin="0.82" />
+							<Interval closure="closedOpen" leftMargin="0.82" rightMargin="1.06" />
+							<Interval closure="closedOpen" leftMargin="1.06" rightMargin="1.3" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="31">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="32">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="0" c="37" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="33">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; petalWidth(&lt;1.3;1.54)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="0" c="33" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="34">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; sepalLength(&lt;5.74;6.1)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="35">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; petalWidth(&lt;1.54;1.78)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="2" c="37" d="88" />
+
+	</AssociationRule>
+	<AssociationRule id="36">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; petalWidth(&lt;1.54;1.78)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.875</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="1" c="38" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="37">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; sepalLength(&lt;5.74;6.1)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.6666666667</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="4" c="37" d="86" />
+
+	</AssociationRule>
+	<AssociationRule id="38">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;1.54;1.78)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="0" c="37" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="39">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;2.02;2.26)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0962962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="13" b="0" c="32" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="40">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;2.02;2.26)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="41">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalLength(&lt;6.46;6.82)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="42">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="43">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="44">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="45">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="0" c="37" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="46">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.74;6.1)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.7272727273</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="3" c="37" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="47">
+		<Text>petalWidth(&lt;1.54;1.78)) &amp; sepalLength(&lt;5.74;6.1)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.875</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="1" c="38" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="48">
+		<Text>petalWidth(&lt;2.02;2.26)) &amp; sepalLength(&lt;6.46;6.82)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="0" c="37" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="49">
+		<Text>petalLength(&lt;1;1.59)) &amp; petalWidth(&lt;0.1;0.34)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.2222222222</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="30" b="0" c="15" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="50">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalLength(&lt;4.3;4.66)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1481481481</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="20" b="0" c="25" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="51">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0962962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="13" b="0" c="32" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="52">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="53">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="54">
+		<Text>petalLength(&lt;1;1.59)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1;1.59)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1" rightMargin="1.59" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0962962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="13" b="0" c="32" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="55">
+		<Text>petalLength(&lt;1.59;2.18)) &amp; petalWidth(&lt;0.34;0.58)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1.59;2.18)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.59" rightMargin="2.18" />
+							<Interval closure="closedOpen" leftMargin="2.18" rightMargin="2.77" />
+							<Interval closure="closedOpen" leftMargin="2.77" rightMargin="3.36" />
+							<Interval closure="closedOpen" leftMargin="3.36" rightMargin="3.95" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.34;0.58)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.34" rightMargin="0.58" />
+							<Interval closure="closedOpen" leftMargin="0.58" rightMargin="0.82" />
+							<Interval closure="closedOpen" leftMargin="0.82" rightMargin="1.06" />
+							<Interval closure="closedOpen" leftMargin="1.06" rightMargin="1.3" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5833333333</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="5" c="38" d="85" />
+
+	</AssociationRule>
+	<AssociationRule id="56">
+		<Text>petalLength(&lt;1.59;2.18)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;1.59;2.18)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.59" rightMargin="2.18" />
+							<Interval closure="closedOpen" leftMargin="2.18" rightMargin="2.77" />
+							<Interval closure="closedOpen" leftMargin="2.77" rightMargin="3.36" />
+							<Interval closure="closedOpen" leftMargin="3.36" rightMargin="3.95" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="57">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; petalWidth(&lt;1.3;1.54)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1407407407</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="19" b="0" c="26" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="58">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="59">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="0" c="33" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="60">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1111111111</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.9375</IMValue>
+		</IMValues>
+
+		<FourFtTable a="15" b="1" c="30" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="61">
+		<Text>petalLength(&lt;3.95;4.54)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;3.95;4.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.95" rightMargin="4.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="62">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; petalWidth(&lt;1.3;1.54)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="2" c="37" d="88" />
+
+	</AssociationRule>
+	<AssociationRule id="63">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; petalWidth(&lt;1.54;1.78)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.7692307692</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="3" c="35" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="64">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.6470588235</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="6" c="34" d="84" />
+
+	</AssociationRule>
+	<AssociationRule id="65">
+		<Text>petalLength(&lt;4.54;5.13)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;4.54;5.13)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.54" rightMargin="5.13" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5882352941</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="7" c="35" d="83" />
+
+	</AssociationRule>
+	<AssociationRule id="66">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;1.54;1.78)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="67">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; petalWidth(&lt;2.02;2.26)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1333333333</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="18" b="0" c="27" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="68">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="69">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1555555556</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="21" b="0" c="24" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="70">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="71">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="72">
+		<Text>petalLength(&lt;5.13;5.72)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalLength</Name>
+					<Column>petalLength</Column>
+					<Category>
+						<Name>&lt;5.13;5.72)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.13" rightMargin="5.72" />
+							<Interval closure="closedOpen" leftMargin="5.72" rightMargin="6.31" />
+							<Interval closure="closedClosed" leftMargin="6.31" rightMargin="6.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="73">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;4.3;4.66)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1777777778</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="24" b="0" c="21" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="74">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="75">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="76">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="0" c="33" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="77">
+		<Text>petalWidth(&lt;0.1;0.34)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.1;0.34)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.1" rightMargin="0.34" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="0" c="33" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="78">
+		<Text>petalWidth(&lt;0.34;0.58)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.34;0.58)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.34" rightMargin="0.58" />
+							<Interval closure="closedOpen" leftMargin="0.58" rightMargin="0.82" />
+							<Interval closure="closedOpen" leftMargin="0.82" rightMargin="1.06" />
+							<Interval closure="closedOpen" leftMargin="1.06" rightMargin="1.3" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5833333333</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="5" c="38" d="85" />
+
+	</AssociationRule>
+	<AssociationRule id="79">
+		<Text>petalWidth(&lt;0.34;0.58)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;0.34;0.58)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="0.34" rightMargin="0.58" />
+							<Interval closure="closedOpen" leftMargin="0.58" rightMargin="0.82" />
+							<Interval closure="closedOpen" leftMargin="0.82" rightMargin="1.06" />
+							<Interval closure="closedOpen" leftMargin="1.06" rightMargin="1.3" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="80">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.02;5.38)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="81">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.7857142857</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="3" c="34" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="82">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="0" c="38" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="83">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1407407407</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8636363636</IMValue>
+		</IMValues>
+
+		<FourFtTable a="19" b="3" c="26" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="84">
+		<Text>petalWidth(&lt;1.3;1.54)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.3;1.54)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.3" rightMargin="1.54" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0666666667</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="9" b="0" c="36" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="85">
+		<Text>petalWidth(&lt;1.54;1.78)) &amp; sepalLength(&lt;5.74;6.1)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.7857142857</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="3" c="34" d="87" />
+
+	</AssociationRule>
+	<AssociationRule id="86">
+		<Text>petalWidth(&lt;1.54;1.78)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8888888889</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="1" c="37" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="87">
+		<Text>petalWidth(&lt;1.54;1.78)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0962962963</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.9285714286</IMValue>
+		</IMValues>
+
+		<FourFtTable a="13" b="1" c="32" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="88">
+		<Text>petalWidth(&lt;1.54;1.78)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;1.54;1.78)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="1.54" rightMargin="1.78" />
+							<Interval closure="closedOpen" leftMargin="1.78" rightMargin="2.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0518518519</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.875</IMValue>
+		</IMValues>
+
+		<FourFtTable a="7" b="1" c="38" d="89" />
+
+	</AssociationRule>
+	<AssociationRule id="89">
+		<Text>petalWidth(&lt;2.02;2.26)) &amp; sepalLength(&lt;6.46;6.82)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1037037037</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="14" b="0" c="31" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="90">
+		<Text>petalWidth(&lt;2.02;2.26)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>petalWidth</Name>
+					<Column>petalWidth</Column>
+					<Category>
+						<Name>&lt;2.02;2.26)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.02" rightMargin="2.26" />
+							<Interval closure="closedClosed" leftMargin="2.26" rightMargin="2.5" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0592592593</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="8" b="0" c="37" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="91">
+		<Text>sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0740740741</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="10" b="0" c="35" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="92">
+		<Text>sepalLength(&lt;4.3;4.66)) &amp; sepalWidth(&lt;3.2;3.44)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;4.3;4.66)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="4.3" rightMargin="4.66" />
+							<Interval closure="closedOpen" leftMargin="4.66" rightMargin="5.02" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.2;3.44)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.2" rightMargin="3.44" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="0" c="34" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="93">
+		<Text>sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0888888889</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.8571428571</IMValue>
+		</IMValues>
+
+		<FourFtTable a="12" b="2" c="33" d="88" />
+
+	</AssociationRule>
+	<AssociationRule id="94">
+		<Text>sepalLength(&lt;5.02;5.38)) &amp; sepalWidth(&lt;3.44;3.68)) &gt;:&lt; XClass(Iris-setosa)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.02;5.38)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.02" rightMargin="5.38" />
+							<Interval closure="closedOpen" leftMargin="5.38" rightMargin="5.74" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;3.44;3.68)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="3.44" rightMargin="3.68" />
+							<Interval closure="closedOpen" leftMargin="3.68" rightMargin="3.92" />
+							<Interval closure="closedOpen" leftMargin="3.92" rightMargin="4.16" />
+							<Interval closure="closedClosed" leftMargin="4.16" rightMargin="4.4" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-setosa</Name>
+						<Data>
+							<Value>Iris-setosa</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1037037037</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">1</IMValue>
+		</IMValues>
+
+		<FourFtTable a="14" b="0" c="31" d="90" />
+
+	</AssociationRule>
+	<AssociationRule id="95">
+		<Text>sepalLength(&lt;5.74;6.1)) &amp; sepalWidth(&lt;2;2.24)) &gt;:&lt; XClass(Iris-versicolor)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;5.74;6.1)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="5.74" rightMargin="6.1" />
+							<Interval closure="closedOpen" leftMargin="6.1" rightMargin="6.46" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2;2.24)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2" rightMargin="2.24" />
+							<Interval closure="closedOpen" leftMargin="2.24" rightMargin="2.48" />
+							<Interval closure="closedOpen" leftMargin="2.48" rightMargin="2.72" />
+							<Interval closure="closedOpen" leftMargin="2.72" rightMargin="2.96" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-versicolor</Name>
+						<Data>
+							<Value>Iris-versicolor</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.1037037037</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.5185185185</IMValue>
+		</IMValues>
+
+		<FourFtTable a="14" b="13" c="31" d="77" />
+
+	</AssociationRule>
+	<AssociationRule id="96">
+		<Text>sepalLength(&lt;6.46;6.82)) &amp; sepalWidth(&lt;2.96;3.2)) &gt;:&lt; XClass(Iris-virginica)</Text>
+
+		<Antecedent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>sepalLength</Name>
+					<Column>sepalLength</Column>
+					<Category>
+						<Name>&lt;6.46;6.82)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="6.46" rightMargin="6.82" />
+							<Interval closure="closedOpen" leftMargin="6.82" rightMargin="7.18" />
+							<Interval closure="closedOpen" leftMargin="7.18" rightMargin="7.54" />
+							<Interval closure="closedClosed" leftMargin="7.54" rightMargin="7.9" />
+						</Data>
+					</Category>
+				</Attribute>
+
+				<Attribute>
+					<Name>sepalWidth</Name>
+					<Column>sepalWidth</Column>
+					<Category>
+						<Name>&lt;2.96;3.2)</Name>
+						<Data>
+							<Interval closure="closedOpen" leftMargin="2.96" rightMargin="3.2" />
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Antecedent>
+
+		<Consequent>
+			<Cedent connective="Conjunction">
+				<Attribute>
+					<Name>XClass</Name>
+					<Column>XClass</Column>
+					<Category>
+						<Name>Iris-virginica</Name>
+						<Data>
+							<Value>Iris-virginica</Value>
+						</Data>
+					</Category>
+				</Attribute>
+
+			</Cedent>
+		</Consequent>
+
+
+		<IMValues>
+			<IMValue selected="ok" name="BASE" type="%All">0.0814814815</IMValue>
+			<IMValue selected="ok" name="FUI" type="Abs">0.6875</IMValue>
+		</IMValues>
+
+		<FourFtTable a="11" b="5" c="34" d="85" />
+
+	</AssociationRule>
+</AssociationRules> 
